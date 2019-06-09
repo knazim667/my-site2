@@ -55,7 +55,9 @@ class Navbar extends Component {
                             <div className={classOne} id="navbarSupportedContent">
                                 <ul className="navbar-nav nav ml-auto">
                                     <li className="nav-item">
-                                        <Link className={["nav-link", "active"]} to="/about">
+                                        <Link className={window.location.pathname === "/"
+                                                ? "nav-link active"
+                                                : "nav-link"} to="/">
                                           Me
                                         </Link>
                                     </li>
@@ -73,7 +75,9 @@ class Navbar extends Component {
                                     </li>
 
                                     <li className="nav-item">
-                                        <Link className={["nav-link", "active"]} to="/about">
+                                        <Link className={window.location.pathname === "/contact"
+                                                ? "nav-link active"
+                                                : "nav-link"} to="/contact">
                                            Contact
                                         </Link>
                                     </li>

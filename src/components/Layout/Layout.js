@@ -21,12 +21,12 @@ export default class Layout extends Component {
                         </div>
                     </Placeholder>
 
-                    <Header />
+                    {/* <Header /> */}
                     <MainBanner />
                     <BoxArea />
                     <RecentWork />
                     <Blog />
-                    <Footer />
+                    {/* <Footer /> */}
                     <GoTop scrollStepInPx="50" delayInMs="16.66" />
                 </Preloader>
             </NoSSR>
