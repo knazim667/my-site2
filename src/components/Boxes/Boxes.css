@@ -1,0 +1,121 @@
+.boxes-area {
+    position: relative;
+    padding-bottom: 80px;
+    margin-top: 30px;
+    z-index: 1;
+  }
+  
+  .single-box {
+    border: 1px dashed #cdf1d8;
+    padding: 30px 20px;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    background: black;
+    -webkit-box-shadow: 0 0 10px rgba(133, 132, 226, 0.1);
+            box-shadow: 0 0 10px rgba(138, 132, 226, 0.1);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .single-box .icon {
+    display: inline-block;
+    text-align: center;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    background: #cdf1d8;
+    border-radius: 50%;
+    color: #44ce6f;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .single-box h3 {
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .single-box::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .single-box p {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .single-box.bg-f78acb {
+    border-color: rgba(247, 138, 203, 0.3);
+  }
+  
+  .single-box.bg-f78acb .icon {
+    color: #f78acb;
+    background: rgba(247, 138, 203, 0.3);
+  }
+  
+  .single-box.bg-c679e3 {
+    border-color: #edc3fc;
+  }
+  
+  .single-box.bg-c679e3 .icon {
+    color: #c679e3;
+    background: #edc3fc;
+  }
+  
+  .single-box.bg-eb6b3d {
+    border-color: rgba(235, 107, 61, 0.3);
+  }
+  
+  .single-box.bg-eb6b3d .icon {
+    color: #eb6b3d;
+    background: rgba(231, 91, 40, 0.3);
+  }
+  
+  .single-box:hover {
+    -webkit-transform: translateY(-9px);
+            transform: translateY(-9px);
+    border-color: transparent;
+  }
+  
+  .single-box:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .single-box:hover .icon {
+    background: #ffffff;
+    color: #44ce6f;
+  }
+  
+  .single-box:hover h3, .single-box:hover p {
+    color: #ffffff;
+  }
+  
+  .single-box:hover.bg-f78acb .icon {
+    color: #f78acb;
+  }
+  
+  .single-box:hover.bg-c679e3 .icon {
+    color: #c679e3;
+  }
+  
+  .single-box:hover.bg-eb6b3d .icon {
+    color: #eb6b3d;
+  }
+  

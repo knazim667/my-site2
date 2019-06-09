@@ -1,0 +1,34 @@
+.box {
+    width : 60px;
+    height : 60px;
+    padding : 4px;
+    border : 2px solid #44ce6f;
+    /* margin-top : 20px;
+    margin-left : 100px; */
+    justify-content : center;
+    align-items : center;
+    display : block;
+    position: relative;
+}
+.box:hover{
+    background-color: #44ce6f;
+    color: #44ce6f;
+    transform: scale(1.1);
+    text-decoration: none;
+}
+.logo {
+    font-size: 2em;
+    margin-block-start : 2px;
+    margin-block-end : 0px;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    line-height: 1em;
+    margin-left: -1px;
+    color : white;
+    font-weight : 800;
+    
+}
+.logo:hover {
+    color : white;
+   text-decoration: none;
+}
