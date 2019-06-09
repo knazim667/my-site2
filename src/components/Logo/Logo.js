@@ -3,7 +3,7 @@ import './Logo.css';
 
 export default function Logo() {
     return (
-        <div className="box">
+        <div className="box1">
             
             <h3 className="logo">
                 MN

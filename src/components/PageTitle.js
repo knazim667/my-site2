@@ -15,7 +15,7 @@ export default function PageTitle(props) {
             <div className="shape2 rotateme"><img src={require("../assets/images/shape2.svg")} alt="shape" /></div>
             <div className="shape3"><img src={require("../assets/images/shape3.svg")} alt="shape" /></div>
             <div className="shape4"><img src={require("../assets/images/shape4.svg")} alt="shape" /></div>
-            <div className="shape5"><img src={require("../assets/images/shape5.png")} alt="shape" /></div>
+            <div className="shape5"><img src={require("../assets/images/outlook-icon-png-2175.png")} alt="shape" /></div>
             <div className="shape6 rotateme"><img src={require("../assets/images/shape4.svg")} alt="shape" /></div>
             <div className="shape7"><img src={require("../assets/images/shape4.svg")} alt="shape" /></div>
             <div className="shape8 rotateme"><img src={require("../assets/images/shape2.svg")} alt="shape" /></div>

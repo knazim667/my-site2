@@ -58,18 +58,30 @@ class Navbar extends Component {
                                         <Link className={window.location.pathname === "/"
                                                 ? "nav-link active"
                                                 : "nav-link"} to="/">
-                                          Me
+                                          Home
                                         </Link>
                                     </li>
 
                                     <li className="nav-item">
-                                        <Link className={["nav-link", "active"]} to="/about">
+                                        <Link className={window.location.pathname === "/about"
+                                                ? "nav-link active"
+                                                : "nav-link"} to="/about">
+                                           About Me
+                                        </Link>
+                                    </li>
+
+                                    <li className="nav-item">
+                                        <Link className={window.location.pathname === "/work"
+                                                ? "nav-link active"
+                                                : "nav-link"} to="/work">
                                            Work
                                         </Link>
                                     </li>
 
                                     <li className="nav-item">
-                                        <Link className={["nav-link", "active"]} to="/about">
+                                        <Link className={window.location.pathname === "/blog"
+                                                ? "nav-link active"
+                                                : "nav-link"} to="/blog">
                                            Blog
                                         </Link>
                                     </li>

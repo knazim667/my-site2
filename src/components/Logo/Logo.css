@@ -1,4 +1,4 @@
-.box {
+.box1 {
     width : 50px;
     height : 50px;
     padding : 4px;
@@ -10,13 +10,13 @@
     display : block;
     position: relative;
 }
-.box:hover{
+.box1:hover{
     background-color: #44ce6f;
     color: #44ce6f;
     transform: scale(1.1);
     text-decoration: none;
 }
-.box .logo {
+.box1 .logo {
     font-size: 1.6em;
     margin-block-start : 2px;
     margin-block-end : 0px;
@@ -28,7 +28,7 @@
     font-weight : 800;
     
 }
-.box .logo:hover {
+.box1 .logo:hover {
     color : white;
    text-decoration: none;
 }

@@ -6,6 +6,7 @@ import Layout from './components/Layout/Layout';
 import './App.css'
 import Header from './components/Layout/Header';
 import Contact from './pages/Contact';
+import AboutMe from './pages/AboutMe';
 import Footer from './components/Footer';
 
 export default class App extends Component {
@@ -18,6 +19,9 @@ export default class App extends Component {
         exact path="/" component={Layout} />
         <Route
         exact path="/contact" component={Contact} />
+
+        <Route
+        exact path="/about" component={AboutMe} />
        <Footer />
         </Router>
         

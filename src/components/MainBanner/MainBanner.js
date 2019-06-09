@@ -14,8 +14,9 @@ const MainBanner = () => {
 						<div className="row h-100 justify-content-center align-items-center">
 							<div className="col-lg-5">
 								<div className="hero-content">
-									<h1>Muhammad Nazam <span className="react">React.js / Node.js</span> <br/> Web Developer</h1>
-									<p>Versatile Full Stack Developer | Front End Developer  with 1 Year of Experience Designing, Developing, and Managing complex e-commerce sites, and internal frameworks. Specialized in Javascript (ES5 + ES6 ) and Responsive Design. Excellent Communication, and ability to learn rapidly. Seeking Front End Developer Role, Open to Relocate.</p>
+                                    <h1>Looking For Freelance Developer to Build Your website</h1>
+                                    <p>My purpose is to help you build your online Business presence! Furthermore, have a website or an application no matter what type of website if it’s for a small business, service provider, individual, organization, or a company. Today people are always searching for businesses, companies, or services on the internet, why don’t you be one of their options?</p>
+       
 									
 									<Link to="#">
 										<Button btnType="btn-primary">Get Started</Button>
