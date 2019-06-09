@@ -71,10 +71,10 @@ class Navbar extends Component {
                                     </li>
 
                                     <li className="nav-item">
-                                        <Link className={window.location.pathname === "/work"
+                                        <Link className={window.location.pathname === "/projects"
                                                 ? "nav-link active"
-                                                : "nav-link"} to="/work">
-                                           Work
+                                                : "nav-link"} to="/projects">
+                                           Projects
                                         </Link>
                                     </li>
 
@@ -96,14 +96,14 @@ class Navbar extends Component {
                                 </ul>
                             </div>
 
-                            <div className="others-option">
+                            {/* <div className="others-option">
                                 <Link to="#">
                                     <Button btnType="btn-light">Register</Button>
                                 </Link>
                                 <Link to="#">
                                     <Button btnType="btn-primary">Login</Button>
                                 </Link>
-                            </div>
+                            </div> */}
                         </nav>
                     </div>
                 </div>

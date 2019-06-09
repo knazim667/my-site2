@@ -2241,6 +2241,7 @@ Blog CSS
 =================================================*/
 .blog-area {
   padding-bottom: 50px;
+  background-color: rgb(29, 28, 28);
 }
 
 .blog-area .pagination-area {

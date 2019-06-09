@@ -8,6 +8,7 @@ import Header from './components/Layout/Header';
 import Contact from './pages/Contact';
 import AboutMe from './pages/AboutMe';
 import Footer from './components/Footer';
+import Project from './pages/Project';
 
 export default class App extends Component {
   render() {
@@ -22,6 +23,9 @@ export default class App extends Component {
 
         <Route
         exact path="/about" component={AboutMe} />
+
+        <Route
+        exact path="/projects" component={Project} />
        <Footer />
         </Router>
         

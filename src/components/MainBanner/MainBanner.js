@@ -18,8 +18,8 @@ const MainBanner = () => {
                                     <p>My purpose is to help you build your online Business presence! Furthermore, have a website or an application no matter what type of website if it’s for a small business, service provider, individual, organization, or a company. Today people are always searching for businesses, companies, or services on the internet, why don’t you be one of their options?</p>
        
 									
-									<Link to="#">
-										<Button btnType="btn-primary">Get Started</Button>
+									<Link to="/contact">
+										<Button btnType="btn-primary">Hire Me</Button>
 									</Link>
 								</div>
 							</div>
