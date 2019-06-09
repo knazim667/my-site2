@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import Logo from '../Logo/Logo';
 import Button from '../Button/Button';
-import './Navbar.css';
 class Navbar extends Component {
 
     state = {
@@ -64,12 +63,6 @@ class Navbar extends Component {
                                     <li className="nav-item">
                                         <Link className={["nav-link", "active"]} to="/about">
                                            Work
-                                        </Link>
-                                    </li>
-
-                                    <li className="nav-item">
-                                        <Link className={["nav-link", "active"]} to="/about">
-                                           Skills
                                         </Link>
                                     </li>
 

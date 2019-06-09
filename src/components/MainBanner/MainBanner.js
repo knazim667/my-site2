@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import ReactWOW from 'react-wow';
 import Button from '../Button/Button';
-import './MainBanner.css';
+// import './MainBanner.css';
 
 
 const MainBanner = () => {
@@ -14,7 +14,7 @@ const MainBanner = () => {
 						<div className="row h-100 justify-content-center align-items-center">
 							<div className="col-lg-5">
 								<div className="hero-content">
-									<h1>Muhammad Nazam FullStack Web Developer</h1>
+									<h1>Muhammad Nazam <span className="react">React.js / Node.js</span> <br/> Web Developer</h1>
 									<p>Versatile Full Stack Developer | Front End Developer  with 1 Year of Experience Designing, Developing, and Managing complex e-commerce sites, and internal frameworks. Specialized in Javascript (ES5 + ES6 ) and Responsive Design. Excellent Communication, and ability to learn rapidly. Seeking Front End Developer Role, Open to Relocate.</p>
 									
 									<Link to="#">

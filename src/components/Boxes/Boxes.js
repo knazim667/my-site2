@@ -1,6 +1,5 @@
 import React from 'react';
 import * as Icon from 'react-feather';
-import './Boxes.css';
 
 const BoxArea = (props) => {
     return (
@@ -23,7 +22,7 @@ const BoxArea = (props) => {
                                 <Icon.Camera />
 							</div>
 							<h3>Graphic Design</h3>
-							<p>Designing has been always my passion in parallel with Web development, I always try to learn news tricks and bring them to life in real projects. I designed couple web pages and logos from scratch</p>
+							<p>Designing has been always my passion in parallel with Web development, I always try to learn news tricks and bring them to life in real projects. I designed couple web..</p>
 						</div>
 					</div>
 
@@ -43,7 +42,7 @@ const BoxArea = (props) => {
                                 <Icon.Server />
 							</div>
 							<h3>Database</h3>
-							<p>Try to divide information carefully among tables to eliminate data redundancy. Provides access with information a user needs to join tables together. Ensures data accuracy and integrity.</p>
+							<p>Try to divide information carefully among tables to eliminate data redundancy. Provides access with information a user needs to join tables together. Ensures data accuracy and..</p>
 						</div>
 					</div>
 				</div>
