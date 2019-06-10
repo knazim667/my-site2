@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import * as Icon from 'react-feather'
-import Logo from './Logo/Logo';
 
 export default class Footer extends React.Component {
     render() {

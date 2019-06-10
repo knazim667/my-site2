@@ -101,7 +101,7 @@ export default class ContactBody extends React.Component {
 
                         <div className="row h-100 justify-content-center align-items-center">
                             <div className="col-lg-6 col-md-12">
-                                <img src={require("../assets/images/1.png")} alt="image" />
+                                <img src={require("../assets/images/1.png")} alt="contact-img" />
                             </div>
 
                             <div className="col-lg-6 col-md-12">

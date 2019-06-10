@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import Logo from '../Logo/Logo';
-import Button from '../Button/Button';
+
 class Navbar extends Component {
 
     state = {

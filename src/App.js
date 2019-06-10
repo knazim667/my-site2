@@ -11,6 +11,10 @@ import Footer from './components/Footer';
 import Project from './pages/Project';
 import PupsterDetail from './pages/PupsterDetail';
 import ClickyDetail from './pages/ClickyDetail';
+import DevDetail from './pages/Devonline';
+import ImovieDetail from './pages/ImovieDetail';
+import NutriDetail from './pages/NutriDetail';
+import TrainDetail from './pages/TrainDetail';
 
 export default class App extends Component {
   render() {
@@ -34,6 +38,18 @@ export default class App extends Component {
 
         <Route
         exact path="/clicky" component={ClickyDetail} />
+
+        <Route
+        exact path="/devonline" component={DevDetail} />
+
+        <Route
+        exact path="/imovie" component={ImovieDetail} />
+
+        <Route
+        exact path="/nutrition" component={NutriDetail} />
+
+        <Route
+        exact path="/train" component={TrainDetail} />
        <Footer />
         </Router>
         

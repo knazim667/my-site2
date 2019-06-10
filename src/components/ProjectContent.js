@@ -13,7 +13,7 @@ export default function ProjectContent() {
                     {List.map(item => (
                         <div className="col-lg-4 col-md-6" key={item.id}>
 						<div className="single-works">
-							<img src={item.urls} alt="image" />
+							<img src={item.urls} alt="projectimages" />
                                 <Link to={item.id} className="icon">
                                 
                                         <Icon.Settings />

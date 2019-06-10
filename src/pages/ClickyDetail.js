@@ -26,7 +26,7 @@ export default class ClickyDetail extends Component {
                     <div className="row">
                         <div className="col-lg-6 col-md-6">
                             <div className="project-details-image">
-                                <img src={require("../assets/images/Project-images/clicky.png")} alt="work" />
+                                <img src={require("../assets/images/Project-images/clicky.png")} alt="Clicky" />
 
                                 
                             </div>
@@ -35,7 +35,7 @@ export default class ClickyDetail extends Component {
 
                         <div className="col-lg-6 col-md-6">
                             <div className="project-details-image">
-                                <img src={require("../assets/images/clicky-images/clicky-game.jpg")} alt="work" />
+                                <img src={require("../assets/images/clicky-images/clicky-game.jpg")} alt="Clicky" />
 
                                
                             </div>
@@ -43,7 +43,7 @@ export default class ClickyDetail extends Component {
 
                         <div className="col-lg-6 col-md-6">
                             <div className="project-details-image">
-                                <img src={require("../assets/images/clicky-images/cliky-1.png")} alt="work" />
+                                <img src={require("../assets/images/clicky-images/cliky-1.png")} alt="Clicky" />
 
                                 
                             </div>
@@ -51,7 +51,7 @@ export default class ClickyDetail extends Component {
 
                         <div className="col-lg-6 col-md-6">
                             <div className="project-details-image">
-                                <img src={require("../assets/images/clicky-images/clicky-2.png")} alt="work" />
+                                <img src={require("../assets/images/clicky-images/clicky-2.png")} alt="Clicky" />
 
                          
                             </div>
@@ -100,7 +100,7 @@ export default class ClickyDetail extends Component {
                                     </div>
 
                                     <div className="single-info-box">
-                                        <a href="https://knazim667.github.io/clicky-game-2/" className="btn btn-primary" role="button" target="_blank">Live Preview</a>
+                                        <a href="https://knazim667.github.io/clicky-game-2/" className="btn btn-primary" role="button" target="_blank" rel="noopener noreferrer">Live Preview</a>
                                     </div>
                                 </div>
                             </div>

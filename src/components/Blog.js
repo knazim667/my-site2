@@ -19,7 +19,7 @@ export default class Blog extends React.Component {
                                 <div className="blog-image">
                                     <Link to="#">
                                        
-                                            <img src={require("../assets/images/blog-image/1.jpg")} alt="image" />
+                                            <img src={require("../assets/images/blog-image/1.jpg")} alt="blog-img" />
                                         
                                     </Link>
 
@@ -55,7 +55,7 @@ export default class Blog extends React.Component {
                                 <div className="blog-image">
                                     <Link to="#">
                                     
-                                            <img src={require("../assets/images/blog-image/2.jpg")} alt="image" />
+                                            <img src={require("../assets/images/blog-image/2.jpg")} alt="iblog-img" />
                                       
                                     </Link>
 
@@ -90,7 +90,7 @@ export default class Blog extends React.Component {
                                 <div className="blog-image">
                                     <Link to="#">
                                     
-                                            <img src={require("../assets/images/blog-image/3.jpg")} alt="image" />
+                                            <img src={require("../assets/images/blog-image/3.jpg")} alt="blog-img" />
                                   
                                     </Link>
 

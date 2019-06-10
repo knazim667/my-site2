@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 
 const List = [
@@ -21,7 +21,7 @@ const List = [
         detail : "Dev Online is a free, online service Bootsrap framework website with scroll reavel animation and Mobile responsive."
     },
     {
-        id : '/imove',
+        id : '/imovie',
         urls : require('../assets/images/Project-images/imove.jpg'),
         heading : 'I Heart Movie',
         detail : "This is Movie Search website where you can find the newest movies and news related to movies, also you can add or read reviews."

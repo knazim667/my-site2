@@ -96,7 +96,7 @@ export default class PupsterDetail extends Component {
                                     </div>
 
                                     <div className="single-info-box">
-                                        <a href="https://vast-reaches-87059.herokuapp.com" className="btn btn-primary" role="button" target="_blank">Live Preview</a>
+                                        <a href="https://vast-reaches-87059.herokuapp.com" className="btn btn-primary" role="button" target="_blank" rel="noopener noreferrer">Live Preview</a>
                                     </div>
                                 </div>
                             </div>
