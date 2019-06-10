@@ -2,6 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import * as Icon from 'react-feather';
 import OwlCarousel from 'react-owl-carousel3';
+import List from '../../utils/List';
+
 
 
 const slideOptions = {
@@ -9,7 +11,7 @@ const slideOptions = {
     loop: true,
     nav: false,
     autoplay: true,
-    dots: false,
+    dots: true,
     responsive: {
         0: {
             items: 1
@@ -17,11 +19,11 @@ const slideOptions = {
         786: {
             items: 2
         },
-        1200: {
+        1024: {
             items: 3
         },
        1400:{
-           items : 3
+           items : 4
        }
     }
 }
@@ -46,12 +48,13 @@ class RecentWork extends React.Component {
                         className="owl-theme"
                         {...slideOptions}
                     >
-                        <div className="item">
+                        {List.map(item => (
+                            <div className="item" key={item.id}>
                             <div className="col-lg-12">
                                 <div className="single-works">
-                                    <img src={require("../../assets/images/works-image/1.jpg")} alt="pupster" />
+                                    <img src={item.urls} alt="pupster" />
 
-                                    <Link to="/pupster" className="icon">
+                                    <Link to={item.id} className="icon">
                                         
                                             <Icon.Settings />
                                       
@@ -59,17 +62,19 @@ class RecentWork extends React.Component {
 
                                     <div className="works-content">
                                         <h3>
-                                            <Link to="#">
-                                                Incredible infrastructure
+                                            <Link to={item.id}>
+                                                {item.heading}
                                             </Link>
                                         </h3>
-                                        <p>Lorem ipsum dolor amet, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+                                        <p>{item.detail}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="item">
+                        ))}
+                        
+                        {/* <div className="item">
                             <div className="col-lg-12">
                                 <div className="single-works">
                                     <img src={require("../../assets/images/works-image/2.jpg")} alt="image" />
@@ -159,7 +164,7 @@ class RecentWork extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                     </OwlCarousel>
 

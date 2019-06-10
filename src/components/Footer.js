@@ -68,24 +68,24 @@ export default class Footer extends React.Component {
                                 </ul>
                                 <ul className="social-links">
                                     <li>
-                                        <Link to="#" className="facebook">
+                                        <Link to="https://www.facebook.com/profile.php?id=100016876037759" target="_blank" className="facebook">
                                          
                                                 <Icon.Facebook />
                                         
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#" className="twitter">
+                                        <Link to="https://twitter.com/Muhamma66128620" target="_blank" className="twitter">
                                             <Icon.Twitter />
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#" className="instagram">
+                                        <Link to="https://www.instagram.com/developersonline/" target="_blank" className="instagram">
                                             <Icon.Instagram />
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#" className="linkedin">
+                                        <Link to="https://www.linkedin.com/in/knazim667" target="_blank" className="linkedin">
                                             <Icon.Linkedin />
                                         </Link>
                                     </li>
@@ -95,7 +95,7 @@ export default class Footer extends React.Component {
 
                         <div className="col-lg-12 col-md-12">
                             <div className="copyright-area">
-                                <p>Copyright @2019 Muhammad Nzam. All rights reserved</p>
+                                <p>Copyright @2019 Muhammad Nazam. All rights reserved</p>
                             </div>
                         </div>
                     </div>

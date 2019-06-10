@@ -9,6 +9,8 @@ import Contact from './pages/Contact';
 import AboutMe from './pages/AboutMe';
 import Footer from './components/Footer';
 import Project from './pages/Project';
+import PupsterDetail from './pages/PupsterDetail';
+import ClickyDetail from './pages/ClickyDetail';
 
 export default class App extends Component {
   render() {
@@ -26,6 +28,12 @@ export default class App extends Component {
 
         <Route
         exact path="/projects" component={Project} />
+
+        <Route
+        exact path="/pupster" component={PupsterDetail} />
+
+        <Route
+        exact path="/clicky" component={ClickyDetail} />
        <Footer />
         </Router>
         
