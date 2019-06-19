@@ -16,7 +16,7 @@ export default function AboutArea() {
 							<div className="section-title">
 								<h2>About Me</h2>
 								<div className="bar"></div>
-								<p>My Name is <b>Muhammad Nazam</b>I am a Versatile <b>Full Stack Developer | Front End Developer</b>  with 1 Year of Experience <b>Designing</b>, <b>Developing</b>, and Managing complex <b>E-Commerce</b> sites, and internal frameworks.</p>
+								<p>My Name is <b>Muhammad Nazam</b> I am a Versatile <b>Full Stack Developer | Front End Developer</b>  with Years of Experience <b>Designing</b>, <b>Developing</b>, and Managing complex <b>E-Commerce</b> sites, and internal frameworks.</p>
 									
 								</div>
 

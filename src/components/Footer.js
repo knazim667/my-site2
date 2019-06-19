@@ -13,7 +13,8 @@ export default class Footer extends React.Component {
                                
                                 <h3>Muhammad Nazam</h3>
                                  
-                                <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                                <p>I worked with React a lot and I can tell you it's an amazing library for creating highly reactive and super fast javascript driven Web applications.
+                                </p>
                             </div>
                         </div>
 

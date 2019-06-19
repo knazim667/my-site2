@@ -1,6 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import * as Icon from 'react-feather'
+
 import 'isomorphic-fetch'
 
 export default class ContactBody extends React.Component {
