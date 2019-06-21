@@ -1,8 +1,46 @@
-import React from 'react';
+import React, {Fragment, useState } from 'react';
 import Button from './Button/Button';
+import axios from 'axios';
 
-export default function RegisterArea() {
+
+const RegisterArea = () => {
+
+    const [formData , setFormData ] = useState({
+        name : '',
+        email : '',
+        password : ''
+    });
+
+    const {name, email, password} = formData;
+
+    const onChange = e => setFormData({ ...formData, [e.target.name] : e.target.value});
+    const onSubmit = async e => {
+        e.preventDefault();
+        console.log(formData);
+
+        const newUser = {
+            name,
+            email,
+            password,
+        };
+
+        try {
+            const config = {
+                headers : {
+                    'Content-Type' : 'application/json'
+                }
+            };
+
+            const body = JSON.stringify(newUser);
+
+            const res = await axios.post('https://fast-bastion-48125.herokuapp.com/api/users', body, config);
+            console.log(res.data);
+        } catch (err) {
+            console.log(err.response.data);
+        }
+    }
     return (
+        <Fragment>
         <section className="register-area ptb-80">
             <div className="container">
                 
@@ -21,7 +59,7 @@ export default function RegisterArea() {
                         </div>
                                 <form 
                                     id="registerForm" 
-                                    // onSubmit={this.onSubmit}
+                                    onSubmit={e => onSubmit(e)}
                                 >
                                     <div className="row">
                                         
@@ -34,8 +72,8 @@ export default function RegisterArea() {
                                                     required 
                                                     data-error="Please enter your name" 
                                                     placeholder="Name" 
-                                                    // value={this.state.formFields.email}
-                                                    // onChange={this.emailChangeHandler}
+                                                    value={name}
+                                                    onChange={e => onChange(e)}
                                                 />
                                                 <div className="help-block with-errors"></div>
                                             </div>
@@ -50,8 +88,8 @@ export default function RegisterArea() {
                                                     required 
                                                     data-error="Please enter your email" 
                                                     placeholder="Email" 
-                                                    // value={this.state.formFields.email}
-                                                    // onChange={this.emailChangeHandler}
+                                                    value={email}
+                                                    onChange={e => onChange(e)}
                                                 />
                                                 <div className="help-block with-errors"></div>
                                             </div>
@@ -64,8 +102,8 @@ export default function RegisterArea() {
                                                     name="password" 
                                                     className="form-control" 
                                                     placeholder="Password" 
-                                                    // value={this.state.formFields.phone}
-                                                    // onChange={this.phoneChangeHandler}
+                                                    value={password}
+                                                    onChange={e => onChange(e)}
                                                 />
                                             </div>
                                         </div>
@@ -81,5 +119,8 @@ export default function RegisterArea() {
             </div>
 
         </section>
+        </Fragment>
     )
 }
+
+export default RegisterArea;
