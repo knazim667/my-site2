@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import Logo from '../Logo/Logo';
+import Button from '../Button/Button';
 
 class Navbar extends Component {
 
@@ -96,14 +97,14 @@ class Navbar extends Component {
                                 </ul>
                             </div>
 
-                            {/* <div className="others-option">
-                                <Link to="#">
+                            <div className="others-option">
+                                <Link to="/register">
                                     <Button btnType="btn-light">Register</Button>
                                 </Link>
-                                <Link to="#">
+                                <Link to="/login">
                                     <Button btnType="btn-primary">Login</Button>
                                 </Link>
-                            </div> */}
+                            </div>
                         </nav>
                     </div>
                 </div>

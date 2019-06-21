@@ -1066,7 +1066,23 @@ Boxes CSS
 .single-box:hover.bg-eb6b3d .icon {
   color: #eb6b3d;
 }
-
+/*================================================
+Login CSS
+=================================================*/
+.login-area {
+  padding-bottom: 50px;
+}
+.login-area .login-image .desktop {
+  margin-left: 30%;
+  margin-top: -300px;
+  height: 250px;
+  z-index: 1;
+ 
+}
+.login-area .register-link {
+  margin-left: 30%;
+  margin-top: -500px;
+}
 /*================================================
 About CSS
 =================================================*/

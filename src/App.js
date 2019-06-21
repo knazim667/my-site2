@@ -15,6 +15,8 @@ import DevDetail from './pages/Devonline';
 import ImovieDetail from './pages/ImovieDetail';
 import NutriDetail from './pages/NutriDetail';
 import TrainDetail from './pages/TrainDetail';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 export default class App extends Component {
   render() {
@@ -24,6 +26,12 @@ export default class App extends Component {
           <Header />
         <Route
         exact path="/" component={Layout} />
+
+        <Route
+        exact path="/login" component={Login} />
+
+        <Route
+        exact path="/register" component={Register} />
         <Route
         exact path="/contact" component={Contact} />
 
