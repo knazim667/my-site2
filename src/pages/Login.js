@@ -16,7 +16,7 @@ export default class Login extends Component {
                     </Placeholder>
                 
                     <PageTitle>
-                        Hello World
+                        Sign Into Your Account
                     </PageTitle>
 
                     <LoginArea />

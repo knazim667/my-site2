@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { Fragment, useState} from 'react';
 import Button from './Button/Button';
 
-export default function LoginArea() {
+const LoginArea = () => {
+
+    const [formData, setFormData] = useState({
+        email : '',
+        password : ''
+    })
+
+    const { email, password} = formData;
+
+    const onChange = e => setFormData({ ...formData, [e.target.name] : e.target.value });
+
+    const onSubmit = e => {
+        e.preventDefault();
+    }
+
     return (
+        <Fragment>
         <section className="login-area ptb-80">
             <div className="container">
                 
@@ -21,7 +36,7 @@ export default function LoginArea() {
                         </div>
                                 <form 
                                     id="loginForm" 
-                                    // onSubmit={this.onSubmit}
+                                    onSubmit={e => onSubmit(e)}
                                 >
                                     <div className="row">
                                         
@@ -34,8 +49,8 @@ export default function LoginArea() {
                                                     required 
                                                     data-error="Please enter your email" 
                                                     placeholder="Email" 
-                                                    // value={this.state.formFields.email}
-                                                    // onChange={this.emailChangeHandler}
+                                                    value={email}
+                                                   onChange={e => onChange(e)}
                                                 />
                                                 <div className="help-block with-errors"></div>
                                             </div>
@@ -48,8 +63,9 @@ export default function LoginArea() {
                                                     name="password" 
                                                     className="form-control" 
                                                     placeholder="Password" 
-                                                    // value={this.state.formFields.phone}
-                                                    // onChange={this.phoneChangeHandler}
+                                                    value={password}
+                                                    onChange={e => onChange(e)}
+                                                    required
                                                 />
                                             </div>
                                         </div>
@@ -65,5 +81,8 @@ export default function LoginArea() {
             </div>
 
         </section>
+        </Fragment>
     )
 }
+
+export default LoginArea;
