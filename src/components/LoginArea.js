@@ -1,7 +1,12 @@
 import React, { Fragment, useState} from 'react';
+import { Redirect } from 'react-router-dom';
 import Button from './Button/Button';
+import { connect } from 'react-redux';
+import {login} from '../actions/auth';
+import PropTypes from 'prop-types'
 
-const LoginArea = () => {
+
+const LoginArea = ({login, isAuthenticated}) => {
 
     const [formData, setFormData] = useState({
         email : '',
@@ -14,8 +19,12 @@ const LoginArea = () => {
 
     const onSubmit = e => {
         e.preventDefault();
+        login(email, password);
     }
 
+    if(isAuthenticated) {
+        return <Redirect to="/" />
+    }
     return (
         <Fragment>
         <section className="login-area ptb-80">
@@ -85,4 +94,13 @@ const LoginArea = () => {
     )
 }
 
-export default LoginArea;
+LoginArea.propTypes = {
+    login : PropTypes.func.isRequired,
+    isAuthenticated : PropTypes.bool
+}
+
+const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { login })(LoginArea);

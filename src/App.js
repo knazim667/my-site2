@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './assets/css/responsive.css';
 import './assets/css/animate.css';
@@ -18,11 +18,27 @@ import TrainDetail from './pages/TrainDetail';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
-export default class App extends Component {
-  render() {
+//Redux
+import { Provider } from 'react-redux';
+import store from './store';
+import { loadUser } from './actions/auth';
+import setAuthToken from './utils/setAuthToken';
+
+if(localStorage.token){
+  setAuthToken(localStorage.token)
+}
+const App =()=> {
+ 
+
+    useEffect(() => {
+      store.dispatch(loadUser());
+    }, []);
+
     return (
-      <div>
+     
+        <Provider store={store}>
         <Router>
+          <Fragment>
           <Header />
         <Route
         exact path="/" component={Layout} />
@@ -59,9 +75,10 @@ export default class App extends Component {
         <Route
         exact path="/train" component={TrainDetail} />
        <Footer />
+       </Fragment>
         </Router>
-        
-      </div>
+        </Provider>
+      
     )
   }
-}
+export default App;

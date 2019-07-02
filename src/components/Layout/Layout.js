@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
 import { Preloader, Placeholder } from 'react-preloading-screen';
-import NoSSR from 'react-no-ssr';
 
 import MainBanner from '../MainBanner/MainBanner';
 import BoxArea from '../Boxes/Boxes';
@@ -9,10 +8,10 @@ import '../../assets/css/style.css';
 import Blog from '../Blog';
 import GoTop from '../GoTop.js';
 
-export default class Layout extends Component {
-    render() {
+const Layout =()=>{
+    
         return (
-            <NoSSR>
+            <Fragment>
                 <Preloader>
                 <Placeholder>
                         <div className="preloader">
@@ -28,7 +27,8 @@ export default class Layout extends Component {
                   
                     <GoTop scrollStepInPx="50" delayInMs="16.66" />
                 </Preloader>
-            </NoSSR>
+            </Fragment>
         )
     }
-}
+
+export default Layout;
