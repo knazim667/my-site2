@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, {Component, Fragment } from 'react';
 import { Preloader, Placeholder } from 'react-preloading-screen';
 
 import MainBanner from '../MainBanner/MainBanner';
@@ -6,10 +6,11 @@ import BoxArea from '../Boxes/Boxes';
 import RecentWork from '../RecentWork/RecentWork';
 import '../../assets/css/style.css';
 import Blog from '../Blog';
-import GoTop from '../GoTop.js';
+// import GoTop from '../GoTop.js';
 
-const Layout =()=>{
-    
+
+class Layout extends Component {
+        render(){
         return (
             <Fragment>
                 <Preloader>
@@ -25,10 +26,11 @@ const Layout =()=>{
                     <RecentWork />
                     <Blog />
                   
-                    <GoTop scrollStepInPx="50" delayInMs="16.66" />
+                    {/* <GoTop scrollStepInPx="50" delayInMs="16.66" /> */}
                 </Preloader>
             </Fragment>
         )
     }
+}
 
 export default Layout;

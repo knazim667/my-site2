@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './assets/css/responsive.css';
 import './assets/css/animate.css';
 import Layout from './components/Layout/Layout';
@@ -17,12 +17,14 @@ import NutriDetail from './pages/NutriDetail';
 import TrainDetail from './pages/TrainDetail';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import GoTop from './components/GoTop';
 
 //Redux
 import { Provider } from 'react-redux';
 import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
+import NotFound from './components/NotFound';
 
 if(localStorage.token){
   setAuthToken(localStorage.token)
@@ -40,6 +42,7 @@ const App =()=> {
         <Router>
           <Fragment>
           <Header />
+          <Switch>
         <Route
         exact path="/" component={Layout} />
 
@@ -74,7 +77,10 @@ const App =()=> {
 
         <Route
         exact path="/train" component={TrainDetail} />
+        <Route component={NotFound} />
+        </Switch>
        <Footer />
+       <GoTop scrollStepInPx="50" delayInMs="16.66" />
        </Fragment>
         </Router>
         </Provider>

@@ -31,7 +31,7 @@ export default class Blog extends React.Component {
                                 <div className="blog-post-content">
                                     <h3>
                                         <Link to="#">
-                                            The security risks of changing package owners
+                                            The security risks of changing package
                                         </Link>
                                     </h3>
 

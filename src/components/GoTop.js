@@ -33,6 +33,14 @@ class GoTop extends React.Component {
         this.setState({ intervalId: intervalId });
     }
 
+    componentWillUnmount(){
+        if (window.scrollY < 170) {
+            this.setState({ thePosition: true })
+        } else {
+            this.setState({ thePosition: false })
+        }
+    }
+
     renderGoTopIcon = () => {
         if (this.state.thePosition){
             return (
