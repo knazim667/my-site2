@@ -7,18 +7,10 @@ import PropTypes from 'prop-types'
 import { logout } from '../../actions/auth';
 import { connect } from 'react-redux';
 
-const Navbar = ({ auth: {isAuthenticated, loading}, logout}) => {
+const Navbar = ({ auth: {isAuthenticated}, logout}) => {
 
     const [collapsed, setCollapsed ] = useState(true);
-    // state = {
-    //     collapsed: true,
-    // };
-
-    // toggleNavbar = () => {
-        
-    //         setCollapsed(false),
-       
-    // }
+  
 
     useEffect(() => {
         let elementId = document.getElementById("navbar");
@@ -170,11 +162,11 @@ const Navbar = ({ auth: {isAuthenticated, loading}, logout}) => {
                                 <span><i className="fas fa-bars"></i></span>
                             </button>
 
-                            {!loading && (
+                          
                                 <Fragment>
                                     {isAuthenticated ? authLinks : guestLinks}
                                 </Fragment>
-                            )}
+                            
                             
                         </nav>
                     </div>
