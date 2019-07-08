@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Preloader, Placeholder } from 'react-preloading-screen';
 import PageTitle from '../components/PageTitle';
-// import GoTop from '../components/GoTop';
 import ContactBody from '../components/ContactBody';
+import NoSSR from 'react-no-ssr';
 
-export default function Contact() {
+
+class Contact extends Component {
+    render(){
     return (
+        <NoSSR>
         <Preloader>
         <Placeholder>
             <div className="preloader">
@@ -17,8 +20,10 @@ export default function Contact() {
             Contact
         </PageTitle>
         <ContactBody />
-
-        {/* <GoTop scrollStepInPx="50" delayInMs="16.66" /> */}
     </Preloader>
+    </NoSSR>
     )
 }
+}
+
+export default Contact;

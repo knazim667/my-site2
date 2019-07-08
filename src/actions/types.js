@@ -14,3 +14,4 @@ export const POST_ERROR = "POST_ERROR";
 export const ADD_COMMENT = "ADD_COMMENT";
 
 export const REMOVE_COMMENT = "REMOVE_COMMENT";
+export const ADD_CONTACT = "ADD_CONTACT";

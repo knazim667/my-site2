@@ -26,9 +26,6 @@ const RegisterArea = ({setAlert, register, isAuthenticated}) => {
     } else {
       register({ name, email, password });
     }
-
-
-
   };
   
   if (isAuthenticated) {
