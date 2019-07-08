@@ -34,11 +34,14 @@ class GoTop extends React.Component {
     }
 
     componentWillUnmount(){
-        if (window.scrollY < 170) {
-            this.setState({ thePosition: true })
-        } else {
-            this.setState({ thePosition: false })
-        }
+        document.addEventListener("scroll", () => {
+            if (window.scrollY < 170) {
+                this.setState({ thePosition: true })
+            } else {
+                this.setState({ thePosition: false })
+            }
+        });
+        window.scrollTo(0, 0);
     }
 
     renderGoTopIcon = () => {

@@ -64,9 +64,9 @@ const Navbar = ({ auth: {isAuthenticated, loading}, logout}) => {
                                     </li>
 
                                     <li className="nav-item">
-                                        <Link className={window.location.pathname === "/blog"
+                                        <Link className={window.location.pathname === "/posts"
                                                 ? "nav-link active"
-                                                : "nav-link"} to="/blog">
+                                                : "nav-link"} to="/posts">
                                            Blog
                                         </Link>
                                     </li>
@@ -119,9 +119,9 @@ const Navbar = ({ auth: {isAuthenticated, loading}, logout}) => {
                                     </li>
 
                                     <li className="nav-item">
-                                        <Link className={window.location.pathname === "/blog"
+                                        <Link className={window.location.pathname === "/posts"
                                                 ? "nav-link active"
-                                                : "nav-link"} to="/blog">
+                                                : "nav-link"} to="/posts">
                                            Blog
                                         </Link>
                                     </li>

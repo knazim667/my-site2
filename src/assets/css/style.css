@@ -2489,7 +2489,7 @@ Blog Details CSS
 .blog-details-area .blog-details {
   -webkit-box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
           box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
-  background: #ffffff;
+  background: rgb(29, 28, 28);
 }
 
 .blog-details-area .blog-details .article-img {
@@ -2548,7 +2548,7 @@ Blog Details CSS
 .blog-details-area .blog-details .article-content .blockquote {
   margin-bottom: 20px;
   margin-top: 20px;
-  background: #f7fafd;
+  background:black;
   padding: 25px;
   border-left: 4px solid #44ce6f;
 }
@@ -2568,9 +2568,9 @@ Blog Details CSS
   height: 40px;
   display: inline-block;
   line-height: 38px;
-  border: 1px solid #eeeeee;
+  border: 1px solid #44ce6f;
   border-radius: 50%;
-  color: #0e314c;
+  color: white;
 }
 
 .blog-details-area .blog-details .article-content .share-post ul li a:hover, .blog-details-area .blog-details .article-content .share-post ul li a:focus {
@@ -2622,7 +2622,7 @@ Blog Details CSS
 
 .blog-details-area .post-comments {
   padding: 30px;
-  background: #ffffff;
+  background: rgb(29, 28, 28);
   -webkit-box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
           box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
 }
@@ -2678,7 +2678,7 @@ Blog Details CSS
 
 .blog-details-area .leave-a-reply {
   padding: 30px;
-  background: #ffffff;
+  background: rgb(29, 28, 28);
   -webkit-box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
           box-shadow: 0 5px 10px rgba(0, 9, 128, 0.035), 0 7px 18px rgba(0, 9, 128, 0.05);
   margin-top: 25px;
@@ -2687,6 +2687,10 @@ Blog Details CSS
 .blog-details-area .leave-a-reply h3 {
   font-size: 18px;
   margin-bottom: 30px;
+}
+.blog-details-area .leave-a-reply textarea {
+  background: black;
+  color: white;
 }
 
 /*================================================
