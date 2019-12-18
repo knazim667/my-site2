@@ -16,7 +16,7 @@ const dummyBlogData = [
     image: require("../assets/images/blog-image/2.jpg"),
     date: "March 18, 2019",
     title: " Tips to Protecting Your Business and Family",
-    author: "admin",
+    author: "Jhon",
     blogDetail:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.",
     icon: <Icon.ArrowRight />
@@ -25,7 +25,7 @@ const dummyBlogData = [
     image: require("../assets/images/blog-image/3.jpg"),
     date: "March 19, 2019",
     title: "Protect Your Workplace from Cyber Attacks",
-    author: "admin",
+    author: "Smith",
     blogDetail:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.",
     icon: <Icon.ArrowRight />
