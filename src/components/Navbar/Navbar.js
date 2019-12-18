@@ -1,188 +1,217 @@
 // import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import React, { useState, Fragment, useEffect } from 'react';
-import {Link} from 'react-router-dom';
-import Logo from '../Logo/Logo';
-import Button from '../Button/Button';
-import PropTypes from 'prop-types'
-import { logout } from '../../actions/auth';
-import { connect } from 'react-redux';
+import React, { useState, Fragment, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Logo from "../Logo/Logo";
+import Button from "../Button/Button";
+import PropTypes from "prop-types";
+import { logout } from "../../actions/auth";
+import { connect } from "react-redux";
 
-const Navbar = ({ auth: {isAuthenticated}, logout}) => {
+const Navbar = ({ auth: { isAuthenticated }, logout }) => {
+  const [collapsed, setCollapsed] = useState(true);
 
-    const [collapsed, setCollapsed ] = useState(true);
-  
-
-    useEffect(() => {
-        let elementId = document.getElementById("navbar");
-        document.addEventListener("scroll", () => {
-            if (window.scrollY > 170) {
-                elementId.classList.add("is-sticky");
-            } else {
-                elementId.classList.remove("is-sticky");
-            }
-        });
-        window.scrollTo(0, 0);
+  useEffect(() => {
+    let elementId = document.getElementById("navbar");
+    document.addEventListener("scroll", () => {
+      if (window.scrollY > 170) {
+        elementId.classList.add("is-sticky");
+      } else {
+        elementId.classList.remove("is-sticky");
+      }
     });
-  
-        // const { collapsed } = this.useState;
-        const classOne = collapsed ? 'collapse navbar-collapse' : 'collapse navbar-collapse show';
-        const classTwo = collapsed ? 'navbar-toggler navbar-toggler-right collapsed' : 'navbar-toggler navbar-toggler-right';
+    window.scrollTo(0, 0);
+  });
 
-        const authLinks = (
-            <div className={classOne} id="navbarSupportedContent">
-                                <ul className="navbar-nav nav ml-auto">
-                                    <li className="nav-item">
-                                        <Link className={window.location.pathname === "/"
-                                                ? "nav-link active"
-                                                : "nav-link"} to="/">
-                                          Home
-                                        </Link>
-                                    </li>
+  // const { collapsed } = this.useState;
+  const classOne = collapsed
+    ? "collapse navbar-collapse"
+    : "collapse navbar-collapse show";
+  const classTwo = collapsed
+    ? "navbar-toggler navbar-toggler-right collapsed"
+    : "navbar-toggler navbar-toggler-right";
 
-                                    <li className="nav-item">
-                                        <Link className={window.location.pathname === "/about"
-                                                ? "nav-link active"
-                                                : "nav-link"} to="/about">
-                                           About Me
-                                        </Link>
-                                    </li>
+  const authLinks = (
+    <div className={classOne} id="navbarSupportedContent">
+      <ul className="navbar-nav nav ml-auto">
+        <li className="nav-item">
+          <Link
+            className={
+              window.location.pathname === "/" ? "nav-link active" : "nav-link"
+            }
+            to="/">
+            Home
+          </Link>
+        </li>
 
-                                    <li className="nav-item">
-                                        <Link className={window.location.pathname === "/projects"
-                                                ? "nav-link active"
-                                                : "nav-link"} to="/projects">
-                                           Projects
-                                        </Link>
-                                    </li>
+        <li className="nav-item">
+          <Link
+            className={
+              window.location.pathname === "/about"
+                ? "nav-link active"
+                : "nav-link"
+            }
+            to="/about">
+            About Me
+          </Link>
+        </li>
 
-                                    <li className="nav-item">
-                                        <Link className={window.location.pathname === "/posts"
-                                                ? "nav-link active"
-                                                : "nav-link"} to="/posts">
-                                           Blog
-                                        </Link>
-                                    </li>
+        <li className="nav-item">
+          <Link
+            className={
+              window.location.pathname === "/projects"
+                ? "nav-link active"
+                : "nav-link"
+            }
+            to="/projects">
+            Projects
+          </Link>
+        </li>
 
-                                    <li className="nav-item">
-                                        <Link className={window.location.pathname === "/contact"
-                                                ? "nav-link active"
-                                                : "nav-link"} to="/contact">
-                                           Contact
-                                        </Link>
-                                    </li>
-                                </ul>
-                                <div>
-                                <Link onClick={logout} to="/">
-                                    <Button btnType="btn-primary">Logout</Button>
-                                </Link>
-                                </div>
-                                
-                            </div>
+        <li className="nav-item">
+          <Link
+            className={
+              window.location.pathname === "/posts"
+                ? "nav-link active"
+                : "nav-link"
+            }
+            to="/posts">
+            Blog
+          </Link>
+        </li>
 
-                            
-                                
-                           
-        );
-        const guestLinks = (
-            <div className={classOne} id="navbarSupportedContent">
-                                <ul className="navbar-nav nav ml-auto">
-                                    <li className="nav-item">
-                                        <Link className={window.location.pathname === "/"
-                                                ? "nav-link active"
-                                                : "nav-link"} to="/">
-                                          Home
-                                        </Link>
-                                    </li>
+        <li className="nav-item">
+          <Link
+            className={
+              window.location.pathname === "/contact"
+                ? "nav-link active"
+                : "nav-link"
+            }
+            to="/contact">
+            Contact
+          </Link>
+        </li>
+      </ul>
+      <div>
+        <Link onClick={logout} to="/">
+          <Button btnType="btn-primary">Logout</Button>
+        </Link>
+      </div>
+    </div>
+  );
+  const guestLinks = (
+    <div className={classOne} id="navbarSupportedContent">
+      <ul className="navbar-nav nav ml-auto">
+        <li className="nav-item">
+          <Link
+            className={
+              window.location.pathname === "/" ? "nav-link active" : "nav-link"
+            }
+            to="/">
+            Home
+          </Link>
+        </li>
 
-                                    <li className="nav-item">
-                                        <Link className={window.location.pathname === "/about"
-                                                ? "nav-link active"
-                                                : "nav-link"} to="/about">
-                                           About Me
-                                        </Link>
-                                    </li>
+        <li className="nav-item">
+          <Link
+            className={
+              window.location.pathname === "/about"
+                ? "nav-link active"
+                : "nav-link"
+            }
+            to="/about">
+            About Me
+          </Link>
+        </li>
 
-                                    <li className="nav-item">
-                                        <Link className={window.location.pathname === "/projects"
-                                                ? "nav-link active"
-                                                : "nav-link"} to="/projects">
-                                           Projects
-                                        </Link>
-                                    </li>
+        <li className="nav-item">
+          <Link
+            className={
+              window.location.pathname === "/projects"
+                ? "nav-link active"
+                : "nav-link"
+            }
+            to="/projects">
+            Projects
+          </Link>
+        </li>
 
-                                    <li className="nav-item">
-                                        <Link className={window.location.pathname === "/posts"
-                                                ? "nav-link active"
-                                                : "nav-link"} to="/posts">
-                                           Blog
-                                        </Link>
-                                    </li>
+        <li className="nav-item">
+          <Link
+            className={
+              window.location.pathname === "/posts"
+                ? "nav-link active"
+                : "nav-link"
+            }
+            to="/posts">
+            Blog
+          </Link>
+        </li>
 
-                                    <li className="nav-item">
-                                        <Link className={window.location.pathname === "/contact"
-                                                ? "nav-link active"
-                                                : "nav-link"} to="/contact">
-                                           Contact
-                                        </Link>
-                                    </li>
-                                </ul>
+        <li className="nav-item">
+          <Link
+            className={
+              window.location.pathname === "/contact"
+                ? "nav-link active"
+                : "nav-link"
+            }
+            to="/contact">
+            Contact
+          </Link>
+        </li>
+      </ul>
 
-                                <div className="others-option">
-                                <Link to="/register">
-                                    <Button btnType="btn-light">Register</Button>
-                                </Link>
-                                <Link to="/login">
-                                    <Button btnType="btn-primary">Login</Button>
-                                </Link>
-                                </div>
+      <div className="others-option">
+        <Link to="/register">
+          <Button btnType="btn-light">Register</Button>
+        </Link>
+        <Link to="/login">
+          <Button btnType="btn-primary">Login</Button>
+        </Link>
+      </div>
+    </div>
+  );
 
-                            </div>
+  return (
+    <header id="header">
+      <div id="navbar" className={["mn-nav"]}>
+        <div className="container">
+          <nav className="navbar navbar-expand-md navbar-">
+            <Link className="navbar-brand" to="/">
+              <Logo />
+            </Link>
 
-                            
-        );
+            <button
+              onClick={() => setCollapsed(false)}
+              className={classTwo}
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span>
+                <i className="fas fa-bars" />
+              </span>
+            </button>
 
-        return (
-            <header id="header">
-                <div id="navbar" className={["mn-nav", ] }>
-                    <div className="container">
-                        <nav className="navbar navbar-expand-md navbar-">
-                            <Link className= "navbar-brand"to="/">
-                                <Logo />
-                            </Link>
+            <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
+          </nav>
+        </div>
+      </div>
+    </header>
+  );
+};
 
-                            <button
-                            onClick={() => setCollapsed(false)}
-                            className={classTwo}
-                            type="button" 
-                                data-toggle="collapse" 
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-                                aria-expanded="false" 
-                                aria-label="Toggle navigation"
-                                >
-                                <span><i className="fas fa-bars"></i></span>
-                            </button>
-
-                          
-                                <Fragment>
-                                    {isAuthenticated ? authLinks : guestLinks}
-                                </Fragment>
-                            
-                            
-                        </nav>
-                    </div>
-                </div>
-            </header>
-        )
-    }
-
-
-Navbar.propTypes ={
-    logout : PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired,
-}
+Navbar.propTypes = {
+  logout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
 
 const mapStateToProps = state => ({
-    auth: state.auth
+  auth: state.auth
 });
 
-export default connect(mapStateToProps, { logout })(Navbar);
+export default connect(
+  mapStateToProps,
+  { logout }
+)(Navbar);

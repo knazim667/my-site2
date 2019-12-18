@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import * as Icon from "react-feather";
 import Moment from 'react-moment';
 
-const PostDetail = ({ post: { title, images, description, date } }) => {
+const PostDetail = ({ post: { title, images, description, video, date } }) => {
   return (
     <Fragment>
       <div className="col-lg-10 col-md-12 offset-lg-1">
@@ -23,48 +23,13 @@ const PostDetail = ({ post: { title, images, description, date } }) => {
           <div className="article-content">
             
 
-            <h3>{title}</h3>
+            <h2>{title}</h2>
 
-            <p>
+            <p className="paragraph">
               {description}
             </p>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-              eum alias debitis suscipit, sint dignissimos minus quisquam
-              recusandae nostrum quas eligendi odit, fugiat eius rem. Cumque,
-              labore placeat! Velit, vitae. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Nemo, iste? Aut ipsam consequuntur
-              non rem tenetur dolore consequatur ducimus a labore excepturi quae
-              nisi, quisquam, maxime voluptates magnam aliquid. Cupiditate!
-            </p>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
-              iste? Aut ipsam consequuntur non rem tenetur dolore consequatur
-              ducimus a labore excepturi quae nisi, quisquam, maxime voluptates
-              magnam aliquid. Cupiditate!
-            </p>
-
-            <blockquote className="blockquote">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
-                iste? Aut ipsam consequuntur non rem tenetur dolore consequatur
-                ducimus a labore excepturi quae nisi, quisquam, maxime
-                voluptates magnam aliquid. Cupiditate.
-              </p>
-            </blockquote>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-              eum alias debitis suscipit, sint dignissimos minus quisquam
-              recusandae nostrum quas eligendi odit, fugiat eius rem. Cumque,
-              labore placeat! Velit, vitae. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Nemo, iste? Aut ipsam consequuntur
-              non rem tenetur dolore consequatur ducimus a labore excepturi quae
-              nisi, quisquam, maxime voluptates magnam aliquid. Cupiditate!
-            </p>
-
+            <br/>
+            <iframe width="860" height="515" src={video} frameborder="0" title={title} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div className="share-post">
               <ul>
                 <li>
