@@ -1,4 +1,3 @@
-// import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
@@ -22,154 +21,12 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
     window.scrollTo(0, 0);
   });
 
-  // const { collapsed } = this.useState;
   const classOne = collapsed
     ? "collapse navbar-collapse"
     : "collapse navbar-collapse show";
   const classTwo = collapsed
     ? "navbar-toggler navbar-toggler-right collapsed"
     : "navbar-toggler navbar-toggler-right";
-
-  const authLinks = (
-    <div className={classOne} id="navbarSupportedContent">
-      <ul className="navbar-nav nav ml-auto">
-        <li className="nav-item">
-          <Link
-            className={
-              window.location.pathname === "/" ? "nav-link active" : "nav-link"
-            }
-            to="/">
-            Home
-          </Link>
-        </li>
-
-        <li className="nav-item">
-          <Link
-            className={
-              window.location.pathname === "/about"
-                ? "nav-link active"
-                : "nav-link"
-            }
-            to="/about">
-            About Me
-          </Link>
-        </li>
-
-        <li className="nav-item">
-          <Link
-            className={
-              window.location.pathname === "/projects"
-                ? "nav-link active"
-                : "nav-link"
-            }
-            to="/projects">
-            Projects
-          </Link>
-        </li>
-
-        <li className="nav-item">
-          <Link
-            className={
-              window.location.pathname === "/posts"
-                ? "nav-link active"
-                : "nav-link"
-            }
-            to="/posts">
-            Blog
-          </Link>
-        </li>
-
-        <li className="nav-item">
-          <Link
-            className={
-              window.location.pathname === "/contact"
-                ? "nav-link active"
-                : "nav-link"
-            }
-            to="/contact">
-            Contact
-          </Link>
-        </li>
-      </ul>
-      <div>
-        <Link onClick={logout} to="/">
-          <Button btnType="btn-primary">Logout</Button>
-        </Link>
-      </div>
-    </div>
-  );
-  const guestLinks = (
-    <div className={classOne} id="navbarSupportedContent">
-      <ul className="navbar-nav nav ml-auto">
-        <li className="nav-item">
-          <Link
-            className={
-              window.location.pathname === "/" ? "nav-link active" : "nav-link"
-            }
-            to="/">
-            Home
-          </Link>
-        </li>
-
-        <li className="nav-item">
-          <Link
-            className={
-              window.location.pathname === "/about"
-                ? "nav-link active"
-                : "nav-link"
-            }
-            to="/about">
-            About Me
-          </Link>
-        </li>
-
-        <li className="nav-item">
-          <Link
-            className={
-              window.location.pathname === "/projects"
-                ? "nav-link active"
-                : "nav-link"
-            }
-            to="/projects">
-            Projects
-          </Link>
-        </li>
-
-        <li className="nav-item">
-          <Link
-            className={
-              window.location.pathname === "/posts"
-                ? "nav-link active"
-                : "nav-link"
-            }
-            to="/posts">
-            Blog
-          </Link>
-        </li>
-
-        <li className="nav-item">
-          <Link
-            className={
-              window.location.pathname === "/contact"
-                ? "nav-link active"
-                : "nav-link"
-            }
-            to="/contact">
-            Contact
-          </Link>
-        </li>
-      </ul>
-
-      <div className="others-option">
-        <Link to="/register">
-          <Button btnType="btn-light">Register</Button>
-        </Link>
-        <Link to="/login">
-          <Button btnType="btn-primary">Login</Button>
-        </Link>
-      </div>
-    </div>
-  );
 
   return (
     <header id="header">
@@ -188,13 +45,99 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
               data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
-              aria-label="Toggle navigation">
+              aria-label="Toggle navigation"
+            >
               <span>
                 <i className="fas fa-bars" />
               </span>
             </button>
 
-            <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
+            <Fragment>
+              <div className={classOne} id="navbarSupportedContent">
+                <ul className="navbar-nav nav ml-auto">
+                  <li className="nav-item">
+                    <Link
+                      className={
+                        window.location.pathname === "/"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                      to="/"
+                    >
+                      Home
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link
+                      className={
+                        window.location.pathname === "/about"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                      to="/about"
+                    >
+                      About Me
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link
+                      className={
+                        window.location.pathname === "/projects"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                      to="/projects"
+                    >
+                      Projects
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link
+                      className={
+                        window.location.pathname === "/posts"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                      to="/posts"
+                    >
+                      Blog
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link
+                      className={
+                        window.location.pathname === "/contact"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                      to="/contact"
+                    >
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+
+                <div className="others-option">
+                  {isAuthenticated ? (
+                    <Link onClick={logout} to="/">
+                      <Button btnType="btn-primary">Logout</Button>
+                    </Link>
+                  ) : (
+                    <Link to="/register">
+                      <Button btnType="btn-light">Register</Button>
+                    </Link>
+                  )}
+
+                  <Link to="/login">
+                    <Button btnType="btn-primary">Login</Button>
+                  </Link>
+                </div>
+              </div>
+            </Fragment>
           </nav>
         </div>
       </div>
@@ -204,14 +147,11 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
 
 Navbar.propTypes = {
   logout: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
-  auth: state.auth
+const mapStateToProps = (state) => ({
+  auth: state.auth,
 });
 
-export default connect(
-  mapStateToProps,
-  { logout }
-)(Navbar);
+export default connect(mapStateToProps, { logout })(Navbar);
