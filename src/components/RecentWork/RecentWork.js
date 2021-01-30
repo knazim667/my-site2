@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import * as Icon from "react-feather";
 import OwlCarousel from "react-owl-carousel3";
 import List from "../../utils/List";
+import { projectList } from "../../utils/List";
 
 const slideOptions = {
   items: 4,
@@ -12,18 +13,18 @@ const slideOptions = {
   dots: true,
   responsive: {
     0: {
-      items: 1
+      items: 1,
     },
     786: {
-      items: 2
+      items: 2,
     },
     1024: {
-      items: 3
+      items: 3,
     },
     1400: {
-      items: 4
-    }
-  }
+      items: 4,
+    },
+  },
 };
 
 class RecentWork extends React.Component {
@@ -44,7 +45,7 @@ class RecentWork extends React.Component {
         <div className="row m-0">
           {/* <div className="works-slides"> */}
           <OwlCarousel className="owl-theme" {...slideOptions}>
-            {List.map(item => (
+            {/* List.map(item => (
               <div className="item" key={item.id}>
                 <div className="col-lg-12">
                   <div className="single-works">
@@ -59,6 +60,27 @@ class RecentWork extends React.Component {
                         <Link to={item.id}>{item.heading}</Link>
                       </h3>
                       <p>{item.detail}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )) */}
+
+            {projectList.map((project) => (
+              <div className="item" key={project.id}>
+                <div className="col-lg-12">
+                  <div className="single-works">
+                    <img src={project.images[0]} alt="pupster" />
+
+                    <Link to={project.path} className="icon">
+                      <Icon.Settings />
+                    </Link>
+
+                    <div className="works-content">
+                      <h3>
+                        <Link to={project.path}>{project.title}</Link>
+                      </h3>
+                      <p>{project.headline}</p>
                     </div>
                   </div>
                 </div>
